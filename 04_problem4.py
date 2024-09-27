@@ -1,8 +1,10 @@
-# Replace the double space from problem 3 with single spaces.
+# 4. Write a program to sum a list with 4 numbers.
 
-name = "My  name  is  Hassam."
+my_tuple = (1,3,5,7)
+sum_tuple = sum(my_tuple) # a func used to sum all the values in a tuple
+print(sum_tuple) # it will return 16 / 1+3=4+5=9+7=16
 
-print(name.replace("  "," "))
+# or we can do it as
 
-# in this code, name string is not change because strings are immutable
-# which means you cant change them by executing functions, a new name.replace string was created
+my_tuple = (1,3,5,7)
+print(sum(my_tuple))

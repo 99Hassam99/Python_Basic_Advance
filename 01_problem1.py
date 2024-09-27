@@ -1,11 +1,25 @@
-# Write a python program to display a user entered name followed by Good Afternoon using input () function.
+# write a program to store seven fruits in a list entered by the user
 
-name = input("Enter Your name: ")
-a=", Good after noon!"
+fruits = []
+f1 = input("Enter a fruit name: ")
+fruits.append(f1)
 
-print(name, a)
+f2 = input("Enter a fruit name: ")
+fruits.append(f2)
 
-# or
+f3 = input("Enter a fruit name: ")
+fruits.append(f3)
 
-name = input("Enter Your name: ")
-print(f"Good after Noon! {name}")
+f4 = input("Enter a fruit name: ")
+fruits.append(f4)
+
+f5 = input("Enter a fruit name: ")
+fruits.append(f5)
+
+f6 = input("Enter a fruit name: ")
+fruits.append(f6)
+
+f7 = input("Enter a fruit name: ")
+fruits.append(f7)
+
+print(fruits)

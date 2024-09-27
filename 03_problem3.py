@@ -1,5 +1,5 @@
-# Write a program to detect double space in a string.
+# Check that a tuple type cannot be changed in python
 
-name = "My name is  hassam."
-print(name.index(" "))
-print(name.find("  ")) # it gives 10 value because the doble spaces are at index 10, starting the line from 0 position and it detect it on index 10
+a = (1,3,5,"Shaq")
+a[3] = "4" # it wil give error because tuples are immutable that's they cant be changed
+print(a)
