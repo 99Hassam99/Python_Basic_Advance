@@ -1,25 +1,13 @@
-# write a program to store seven fruits in a list entered by the user
+# Write a program to create a dictionary of Urdu words with values as their English translation.
+# Provide user with an option to look it up!
 
-fruits = []
-f1 = input("Enter a fruit name: ")
-fruits.append(f1)
-
-f2 = input("Enter a fruit name: ")
-fruits.append(f2)
-
-f3 = input("Enter a fruit name: ")
-fruits.append(f3)
-
-f4 = input("Enter a fruit name: ")
-fruits.append(f4)
-
-f5 = input("Enter a fruit name: ")
-fruits.append(f5)
-
-f6 = input("Enter a fruit name: ")
-fruits.append(f6)
-
-f7 = input("Enter a fruit name: ")
-fruits.append(f7)
-
-print(fruits)
+urdu_words={
+    "Neendh":"Sleep",
+    "Hasna":"Laugh",
+    "Rona":"Cry",
+    "Khafa":"Sad"
+            }
+word=input("Enter the word you want to translate: ")
+print(urdu_words[word])
+print(urdu_words.keys())
+print(urdu_words.values())

@@ -1,5 +1,11 @@
-# Check that a tuple type cannot be changed in python
+# Can we have a set with 18 (int) and '18' (str) as a value in it?
 
-a = (1,3,5,"Shaq")
-a[3] = "4" # it wil give error because tuples are immutable that's they cant be changed
-print(a)
+s={18,"18"}
+print(s)
+print(type(s))
+
+# or
+
+a=set()
+a.add(18)
+a.add("18")

@@ -1,29 +1,21 @@
-# Write a program to fill in a letter template given below with name and date.
-# letter = '''
-# Dear <|Name|>,
-# You are selected!
-# <|Date|>
-# '''
+# Write a program to input eight numbers from the user and display all the unique numbers (once).
+unique_num=set()
 
-# example of input data by user
-letter = '''
-Dear </Name/>,
-You are selected!
-</Date/>
-'''
-name =input("Enter your name: ")
-date =input("Enter the date: ")
+num = input("Enter number 1:")
+unique_num.add(int(num))
+num = input("Enter number 2:")
+unique_num.add(int(num))
+num = input("Enter number 3:")
+unique_num.add(int(num))
+num = input("Enter number 4:")
+unique_num.add(int(num))
+num = input("Enter number 5:")
+unique_num.add(int(num))
+num = input("Enter number 6:")
+unique_num.add(int(num))
+num = input("Enter number 7:")
+unique_num.add(int(num))
+num = input("Enter number 8:")
+unique_num.add(int(num))
 
-filled_letter = letter.replace("</Name/>",name).replace("</Date/>",date)
-
-print(filled_letter)
-
-# example without user input
-
-letter=''' 
-Dear </Name/>,
-You are selected!
-</Date/>
-'''
-
-print(letter.replace("</Name/>","Hassam").replace("</Date/>","26-09-2024")) # .replace chaining
+print(unique_num)
