@@ -1,23 +1,10 @@
-# If the names of 2 friends are same; what will happen to the program in problem 6?
-# program 6
-d = {}
-name= input("Enter your name: ")
-lang=input("Enter your fvrt language: ")
-d.update({name:lang})
+#  Write a program to find out whether a given post is talking about “Harry” or not.
 
-name= input("Enter your name: ")
-lang=input("Enter your fvrt language: ")
-d.update({name:lang})
+post = "Hey Hassam, How are you How old are you Hassam"
+# we can also use input() func for this like:
+post = input("Enter a post: ")
 
-name= input("Enter your name: ")
-lang=input("Enter your fvrt language: ")
-d.update({name:lang})
-
-name= input("Enter your name: ")
-lang=input("Enter your fvrt language: ")
-d.update({name:lang})
-
-print(d)
-
-# answer
-# if 2 names of friends are same, then it will update the value and return one value 
+if("Hassam".lower() in post.lower()):
+    print("This post is talking about Hassam.")
+else:
+    print("This post is not talking about Hassam.")
