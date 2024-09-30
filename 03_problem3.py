@@ -1,15 +1,12 @@
-# A spam comment is defined as a text containing following keywords:
-# “Make a lot of money”, “buy now”, “subscribe this”, “click this”. Write a program
-# to detect these spam.
+# Attempt problem 1 using while loop.
 
-p1 ="Make a lot of money"
-p2 ="buy now"
-p3 ="subscribe this"
-p4 ="click this"
+# Write a program to print multiplication table of a given number using for loop.
+# number = int(input("Enter a number: "))
+# for i in range(1, 11):
+#     print(f"{number} * {i} = {number * i}")
 
-message=input("Enter a comment: ")
-
-if((p1 in message) or (p2 in message) or (p3 in message) or (p4 in message)):
-    print("This comment is a spam")
-else:
-    print("This comment is not a spam")
+number = int(input("Enter a number: "))
+i=1 # starts with 1
+while(i<11):
+    print(f"{number}*{i} = {number* i}")
+    i +=1

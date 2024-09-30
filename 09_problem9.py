@@ -1,11 +1,13 @@
-# Can you change the values inside a list which is contained in set S?
-s = {8, 7, 12, "Harry", [1,2]}
-
-s[1,2]=1
-print(s)
-
-# there are 2 errors in this
-
-# list cant be included in a set
-# sets are immutable and hashable, that is they cant be changed
-# while lists are mutable and unhashable
+# Write a program to print the following star pattern.
+# * * *
+# *   * for n = 3
+# * * *
+n = int(input("Enter a number: "))
+for i in range(1,n+1):
+    if(i==1 or i==n):
+        print("*"*n,end="")
+    else:
+        print("*",end="")
+        print(" "*(n-2),end="")
+        print("*",end="")
+    print("")

@@ -1,21 +1,6 @@
-# Write a program to input eight numbers from the user and display all the unique numbers (once).
-unique_num=set()
+# Write a program to greet all the person names stored in a list ‘l’ and which starts with S.
+l = ["Harry", "Soham", "Sachin", "Rahul","Shaq"]
 
-num = input("Enter number 1:")
-unique_num.add(int(num))
-num = input("Enter number 2:")
-unique_num.add(int(num))
-num = input("Enter number 3:")
-unique_num.add(int(num))
-num = input("Enter number 4:")
-unique_num.add(int(num))
-num = input("Enter number 5:")
-unique_num.add(int(num))
-num = input("Enter number 6:")
-unique_num.add(int(num))
-num = input("Enter number 7:")
-unique_num.add(int(num))
-num = input("Enter number 8:")
-unique_num.add(int(num))
-
-print(unique_num)
+for i in l:
+    if i.startswith("S"):
+        print(f"Greeting! {i}")

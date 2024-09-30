@@ -1,13 +1,9 @@
-# Write a program to create a dictionary of Urdu words with values as their English translation.
-# Provide user with an option to look it up!
+# Write a program to print multiplication table of a given number using for loop.
 
-urdu_words={
-    "Neendh":"Sleep",
-    "Hasna":"Laugh",
-    "Rona":"Cry",
-    "Khafa":"Sad"
-            }
-word=input("Enter the word you want to translate: ")
-print(urdu_words[word])
-print(urdu_words.keys())
-print(urdu_words.values())
+# for i in range(0,11):
+#     print(f"2*{i}",i)
+#     i = i*2    | wrong attempt
+
+number = int(input("Enter a number: "))
+for i in range(1, 11):
+    print(f"{number} * {i} = {number * i}")

@@ -1,23 +1,12 @@
-# If languages of two friends are same; what will happen to the program in problem 6?
+# Write a program to print the following star pattern:
+# *
+# **
+# *** for n = 3
 
-# problem 6
-d = {}
-name= input("Enter your name: ")
-lang=input("Enter your fvrt language: ")
-d.update({name:lang})
-
-name= input("Enter your name: ")
-lang=input("Enter your fvrt language: ")
-d.update({name:lang})
-
-name= input("Enter your name: ")
-lang=input("Enter your fvrt language: ")
-d.update({name:lang})
-
-name= input("Enter your name: ")
-lang=input("Enter your fvrt language: ")
-d.update({name:lang})
-
-print(d)
-
-# it will print same languages to the both friends
+n = int(input("Enter a number: "))
+for i in range(1,n+1):
+    # print(""* (n-i),end="") it can be done like this
+    # print("*"* (2*i-i), end="")
+    # but can also be done like this
+    print("*"*i,end="")
+    print("")
