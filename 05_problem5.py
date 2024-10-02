@@ -1,9 +1,15 @@
-# Write a program which finds out whether a given name is present in a list or not.
+# Write a python function to print first n lines of the following pattern:
+# ***
+# ** - for n = 3
+# *
 
-list = ["Shaq","Hassam","Hashir","Shaheer","Eman"]
-name =input("Enter your name: ")
 
-if(name in list):
-    print("Yes your name is in the list.")
-else:
-    print("No your name is in the list.")
+def pattern(n):
+    if(n==0):
+        return
+    print("*"*n)
+    pattern(n-1)
+
+
+n = int(input("Enter a number:"))
+pattern(n)

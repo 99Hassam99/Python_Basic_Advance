@@ -1,10 +1,18 @@
-# Write a program to calculate the factorial of a given number using for loop.
+# 6. Write a python function which converts inches to cms.
 
-# 5!=1*2*3*4*5
+def inches_cms():
+    inches=int(input("Enter a number:"))
+    centimeter = 2.54
+    conversion = inches*centimeter
+    print(conversion)
+inches_cms()
 
-n = int(input("Enter a number: "))
-product = 1
-for i in range(1,n+1):
-    product=product*i
 
-print(f'the factorial of {n} is {product}')
+
+# example 2
+
+def inches_cms(inches):
+    return inches*2.54
+
+n=int(input("Enter value in inches: "))
+print(f'The value in cms is:{inches_cms(n)}')

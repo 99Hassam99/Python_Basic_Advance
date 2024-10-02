@@ -1,12 +1,8 @@
-# Write a program to print the following star pattern:
-# *
-# **
-# *** for n = 3
+# 8. Write a python function to print multiplication table of a given number.
 
-n = int(input("Enter a number: "))
-for i in range(1,n+1):
-    # print(""* (n-i),end="") it can be done like this
-    # print("*"* (2*i-i), end="")
-    # but can also be done like this
-    print("*"*i,end="")
-    print("")
+def multiplication(n):
+    for i in range(1,11):
+        print(f'{n}*{i}={n*i}')
+
+n=int(input("enter a number:"))
+multiplication(n)
