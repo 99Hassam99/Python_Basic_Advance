@@ -1,18 +1,9 @@
-# 6. Write a python function which converts inches to cms.
+# Write a program to mine a log file and find out whether it contains ‘python’
 
-def inches_cms():
-    inches=int(input("Enter a number:"))
-    centimeter = 2.54
-    conversion = inches*centimeter
-    print(conversion)
-inches_cms()
+with open("06_log.txt.html",'r')as f:
+    content = f.read()
 
-
-
-# example 2
-
-def inches_cms(inches):
-    return inches*2.54
-
-n=int(input("Enter value in inches: "))
-print(f'The value in cms is:{inches_cms(n)}')
+if("python" in content):
+    print("Yes python is present in Log file")
+else:
+    print("Yes python is  not present in Log file")

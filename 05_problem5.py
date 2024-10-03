@@ -1,15 +1,12 @@
-# Write a python function to print first n lines of the following pattern:
-# ***
-# ** - for n = 3
-# *
+# Repeat program 4 for a list of such words to be censored.
 
+words = ["donkey","tum",'hosh','nahi']
 
-def pattern(n):
-    if(n==0):
-        return
-    print("*"*n)
-    pattern(n-1)
+with open("04_file.txt","r") as f:
+    content = f.read()
 
+for word in words:
+    content=content.replace(word,"#"*len(word))
 
-n = int(input("Enter a number:"))
-pattern(n)
+with open("04_file.txt","w") as f:
+    f.write(content)

@@ -1,17 +1,13 @@
-# 4. Write a recursive function to calculate the sum of first n natural numbers.
-"""
-sum(1)=1
-sum(2)=1+2
-sum(3)=1+2+3
-sum(4)=1+2+3+4
-sum(5)=1+2+3+4+5
-sum(n)=1+2+3+4+5...n -1+n
-sum(n)=sum(n-1)+n
-"""
-def sum(n):
-    if (n == 1): # base condition which doesn’t call the function any further.
-        return 1
-    return sum(n-1)+ n #  function calling itself
+# A file contains a word “Donkey” multiple times. You need to write a program
+# which replace this word with ##### by updating the same file.
 
-n = int(input("Enter a number: "))
-print(f'The factorial of this number is: {sum(n)}')
+
+word = "donkey"
+
+with open("04_file.txt","r") as f:
+    content = f.read()
+
+content_New=content.replace("donkey","####")
+
+with open("04_file.txt","w") as f:
+    f.write(content_New)

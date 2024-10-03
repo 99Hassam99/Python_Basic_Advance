@@ -1,27 +1,22 @@
-# 1. Write a program using functions to find greatest of three numbers.
+# Write a program to read the text from a given file ‘poems.txt’ and find out
+# whether it contains the word "twinkle"
+from time import perf_counter
 
-def great():
-    a= int(input("Enter a number: "))
-    b= int(input("Enter a number: "))
-    c= int(input("Enter a number: "))
-    if (a>b and a>c):
-        print("Greatest number is A")
-    elif(b>a and b>c):
-        print("Greatest number is B")
-    elif(c>a and c>b):
-        print("Greatest number is C")
+f=open("01_poems.txt", "r")
+data = f.read()
+if("twinkle" in data):
+    print("The word is present in data")
+else:
+    print("The word is not present in data")
 
-great()
+f.close()
 
-# example 2
-def greatest(a,b,c):
-    if (a>b and a>c):
-        return a
-    elif(b>a and b>c):
-        return b
-    elif(c>a and c>b):
-        return c
-a=1
-b=2
-c=3
-print(greatest(a,b,c))
+
+# example on with statement
+
+with open("01_poems.txt") as f:
+    data=f.read()
+    if("twinkly" in data):
+        print("The word twinkle is present in data")
+    else:
+        print("The word twinkle is not present in data")
