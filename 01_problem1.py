@@ -1,22 +1,17 @@
-# Write a program to read the text from a given file ‘poems.txt’ and find out
-# whether it contains the word "twinkle"
-from time import perf_counter
+# Create a class “Programmer” for storing information of few programmers
+# working at Microsoft.
 
-f=open("01_poems.txt", "r")
-data = f.read()
-if("twinkle" in data):
-    print("The word is present in data")
-else:
-    print("The word is not present in data")
+class programmer:
+    company="Microsoft"
 
-f.close()
+    def __init__(self,name,language,salary,pincode):
+        self.name=name
+        self.language=language
+        self.salary=salary
+        self.pincode=pincode
 
+hassam =programmer("hassam","python",230000 ,9123)
+print(hassam.name,hassam.language,hassam.pincode,hassam.salary,hassam.company)
 
-# example on with statement
-
-with open("01_poems.txt") as f:
-    data=f.read()
-    if("twinkly" in data):
-        print("The word twinkle is present in data")
-    else:
-        print("The word twinkle is not present in data")
+ahmad =programmer("ahmad","javascript",200000,9233)
+print(ahmad.name,ahmad.language,ahmad.pincode,ahmad.salary,ahmad.company)

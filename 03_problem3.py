@@ -1,27 +1,11 @@
-# Write a program to generate multiplication tables from 2 to 20 and write it to the
-# different files. Place these files in a folder for a 13 – year old.
+# Create a class with a class attribute a; create an object from it and set ‘a’
+# directly using ‘object.a = 0’. Does this change the class attribute?
 
-def generate_table(n):
-    table =""
-    for i in range(1,11):
-        table += f"{n} * {i} = {n*i}\n"
+class Demo:
+    a=4
 
-    with open(f"tables/table_{n}.txt","w") as f:
-        f.write(table)
-
-
-for i in range (2,21):
-    generate_table(i)
-
-
-
-#
-# def generate_table(n):
-#     table=""
-#     for i in range(1,11):
-#         table= f"{n}*{i}={n*i}\n"
-#     with open(f'tables/table_{n.txt}','w') as f:
-#         f.write(table)
-#
-# for i in range(2,21):
-#     generate_table(i)
+o=Demo()
+print(o.a) # prints the class attribute because instance attribute is not present
+o.a=0 # object attribute is changed to 0 | instance attribute is set
+print(o.a) # prints the instance attribute because instance attribute is present
+print(Demo.a) # prints the class attribute | so the answer of this question is (NO) because the class attribute is still 4 which is not changed
