@@ -1,22 +1,36 @@
-# Write a Class ‘Train’ which has methods to book a ticket, get status (no of seats)
-# and get fare information of train running under Indian Railways.
-import random
-from random import randint
+# Write a class vector representing a vector of n dimensions. Overload the + and *
+# operator which calculates the sum and the dot(.) product of them.
+
+class vector:
+    def __init__(self,x,y,z):
+        self.x = x
+        self.y = y
+        self.z = z
 
 
-class train:
-    def __init__(self,train_No):
-        self.train_No=train_No
+    def __add__(self, sum):
+        result = vector(self.x + sum.x, self.y+sum.y, self.z+sum.z)
+        return result
 
-    def book_ticket(self,departure,arrival):
-        print(f"Ticket is booked in train NO:{self.train_No} from {departure} to {arrival}")
-    def get_status(self):
-        print(f"Train NO:{self.train_No} is running successfully")
+    def __mul__(self, prod):
+        result = self.x * prod.x + self.y * prod.y + self.z * prod.z
+        return result
 
-    def get_fare_info(self,departure,arrival):
-        print(f"Ticket price in train NO:{self.train_No} from {departure} to {arrival} is {random.randint(4000,5000)}")
+    def __str__(self):
+        return f"Vector {self.x}, {self.y}, {self.z}"
 
-t=train(random.randint(1,100))
-t.book_ticket("Peshawar","Karachi")
-t.get_status()
-t.get_fare_info("Peshawar","karachi")
+# test implementation
+v1 = vector(1,3,5)
+v2 = vector(7,9,11)
+v3= vector(13,15,17) # same dimension vectors
+print(v1+v2)
+print(v1 * v2)
+
+print(v1+v3)
+print(v1*v3)
+
+v_sum = v1 + v2 + v3
+print(v_sum)
+
+v_prod = v1 * v3
+print(v_prod)

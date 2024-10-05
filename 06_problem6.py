@@ -1,24 +1,26 @@
-# Can you change the self-parameter inside a class to something else (say
-# “harry”) Try changing self to “slf” or “harry” and see the effects
+# Write __str__() method to print the vector as follows:
+#  7i + 8j +10k
+# Assume vector of dimension 3 for this problem.
 
+class vector:
+    def __init__(self,i,j,k):
+        self.i = i
+        self.j = j
+        self.k = k
 
-import random
-from random import randint
+    def __add__(self, other):
+        result = vector(self.i+other.i , self.j+other.j, self.k+other.k)
+        return result
 
+    def __mul__(self, other):
+        result = self.i * other.i + self.j * other.j + self.k * other.k
+        return result
 
-class train:
-    def __init__(sllf,train_No):
-        sllf.train_No=train_No # nothing will happen if we change the self parameter to slf
+    def __str__(self):
+        return f'Vector: {self.i}i + {self.k}k + {self.j}j'
 
-    def book_ticket(self,departure,arrival):
-        print(f"Ticket is booked in train NO:{self.train_No} from {departure} to {arrival}")
-    def get_status(self):
-        print(f"Train NO:{self.train_No} is running successfully")
+v1 = vector(1,2,3)
+v2 = vector(4,5,6)
 
-    def get_fare_info(self,departure,arrival):
-        print(f"Ticket price in train NO:{self.train_No} from {departure} to {arrival} is {random.randint(4000,5000)}")
-
-t=train(random.randint(1,100))
-t.book_ticket("Peshawar","Karachi")
-t.get_status()
-t.get_fare_info("Peshawar","karachi")
+print(v1+v2)
+print(v1*v2)

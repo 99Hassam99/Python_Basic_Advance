@@ -1,11 +1,20 @@
-# Create a class with a class attribute a; create an object from it and set ‘a’
-# directly using ‘object.a = 0’. Does this change the class attribute?
+# Create a class ‘Employee’ and add salary and increment properties to it.
+# Write a method ‘salaryAfterIncrement’ method with a @property decorator with a setter
+# which changes the value of increment based on the salary.
 
-class Demo:
-    a=4
+class employee:
+    salary = 200
+    increment = 40
 
-o=Demo()
-print(o.a) # prints the class attribute because instance attribute is not present
-o.a=0 # object attribute is changed to 0 | instance attribute is set
-print(o.a) # prints the instance attribute because instance attribute is present
-print(Demo.a) # prints the class attribute | so the answer of this question is (NO) because the class attribute is still 4 which is not changed
+    @property
+    def salary_after_increment(self):
+        return (self.salary+self.salary*(self.increment)/100)
+
+    @salary_after_increment.setter
+    def salary_after_increment(self,salary):
+        self.increment= ((salary/self.salary)-1)*100
+
+e = employee()
+print(e.salary_after_increment)
+e.salary_after_increment = 280
+print(e.increment)
