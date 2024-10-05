@@ -1,29 +1,21 @@
-# Create a class ‘Pets’ from a class ‘Animals’ and further create a class ‘Dog’ from
-# ‘Pets’. Add a method ‘bark’ to class ‘Dog’
+# Write a class “Calculator” capable of finding square, cube and square root of a
+# number
 
-class animals:
-    def __init__(self,name):
-        self.name = name
-    def show(self):
-        print(f"The name of animal is : {self.name}")
+class calculator:
+    def __init__(self,n):
+        self.n=n
 
-class pets(animals):
-    def __init__(self,name,petname):
-        super().__init__(name)
-        self.petname = petname
-    def show(self):
-        print(f"The name of animal is : {self.name} and the pet name is: {self.petname}")
+    def square(self):
+        print(f'the square is: {self.n*self.n}')
 
-class dog(pets):
-    @staticmethod
-    def bark():
-        print("bow bow!")
-d = dog("Dog","Buddy")
-d.bark()
-d.show()
+    def cube(self):
+        print(f'the cube is: {self.n*self.n*self.n}')
 
-e = animals("Cat")
-e.show()
+    def square_root(self):
+        print(f'the square_root is: {self.n**1/2}')
 
-f = pets("Cat","Whisker")
-f.show()
+
+a=calculator(4)
+a.square()
+a.cube()
+a.square_root()
