@@ -1,21 +1,13 @@
-# Write a class “Calculator” capable of finding square, cube and square root of a
-# number
+# Write a program to print third, fifth and seventh element from a list using enumerate
+# function.
+# method 1
+list = [1,2,3,4,5,6,7,8]
+for index,item  in enumerate(list):
+    if index in [2,4,6]:
+        print(f'the item at index {index} is {item}')
 
-class calculator:
-    def __init__(self,n):
-        self.n=n
-
-    def square(self):
-        print(f'the square is: {self.n*self.n}')
-
-    def cube(self):
-        print(f'the cube is: {self.n*self.n*self.n}')
-
-    def square_root(self):
-        print(f'the square_root is: {self.n**1/2}')
-
-
-a=calculator(4)
-a.square()
-a.cube()
-a.square_root()
+# method 2
+list = [1,2,3,4,5,6,7,8]
+for i,item in enumerate(list):
+    if i == 2 or i == 4 or i ==6:
+        print(f'the item at index {i} is { item }')

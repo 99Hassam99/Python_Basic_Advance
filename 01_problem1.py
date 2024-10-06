@@ -1,17 +1,22 @@
-# Create a class “Programmer” for storing information of few programmers
-# working at Microsoft.
+# Write a program to open three files 1.txt, 2.txt and 3.txt if any these files are not
+# present, a message without exiting the program must be printed prompting the same.
 
-class programmer:
-    company="Microsoft"
+try:
+    with open("1.txt","r")as f:
+        print(f.read())
+except Exception as e:
+    print(e)
 
-    def __init__(self,name,language,salary,pincode):
-        self.name=name
-        self.language=language
-        self.salary=salary
-        self.pincode=pincode
+try:
+    with open("2.txt","r")as f:
+        print(f.read())
+except Exception as e:
+    print(e)
 
-hassam =programmer("hassam","python",230000 ,9123)
-print(hassam.name,hassam.language,hassam.pincode,hassam.salary,hassam.company)
+try:
+    with open("3.txt","r")as f:
+        print(f.read())
+except Exception as e:
+    print(e)
 
-ahmad =programmer("ahmad","javascript",200000,9233)
-print(ahmad.name,ahmad.language,ahmad.pincode,ahmad.salary,ahmad.company)
+print("Thank you! ")
