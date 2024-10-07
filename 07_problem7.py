@@ -1,29 +1,14 @@
-#  Override the __len__() method on vector of problem 5 to display the dimension of the
-# vector.
+# flask is basically used for creating websites and APis
 
-class vector:
-    def __init__(self,l):
-        self.l = l
-        # self.i = i
-        # self.j = j
-        # self.k = k
-    # def __add__(self, other):
-    #     result = vector(self.i+other.i, self.j+other.j, self.k+other.k)
-    #     return result
-    #
-    # def __mul__(self, other):
-    #     result = self.i * other.i + self.j * other.j + self.k * other.k
-    #     return result
-    #
-    # def __str__(self):
-    #     return f"Vector is: {self.i}i + {self.j}j + {self.k}k"
-    def __len__(self):
-        return len(self.l)
+# Explore the ‘Flask’ module and create a web server using Flask & Python.
 
-v1=vector([1,2,3])
-v2=vector([3,4,5])
+import flask
+from flask import Flask
 
-# print(v1 + v2)
-# print(v1 * v2)
-print(len(v1))
-print(len(v2))
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+
+app.run()
